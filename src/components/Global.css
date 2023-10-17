@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.Home-Parent{
+    background: rgb(224,228,240);
+    height: 100vh;
+}
+
+.Nav-Parent{
+
+    background-color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.Head-Li {
+    display: flex;
+    gap: 10px;
+}
+
+.Links ul {
+    display: flex;
+    gap: 20px;
+}
+
+.Li-items {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.5 ease-in;
+}
+
+.Li-items:hover {
+    scale: 110%;
+}
+
+.Input  {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.Input input {
+    width: 300px;
+    border: none;
+    background-color: aliceblue;
+    height: 35px;
+    border-radius: 15px;
+    padding-left: 15px;
+    outline-color: dodgerblue;
+} 
+
+
+/* weather boxx----------------- */
+
+.weather-bx-parent {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.rightside-bx {
+    
+    border-radius: 20px;
+    margin-top: 10px;
+    width: 61%;
+    height: 85;
+    background-color: #f0f5ff;
+}
+
+.leftside-bx {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 10px;
+    width: 36%;
+    height: 85vh;
+    background-color: white;
+}
+
+.left-weather {
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 33vw;
+    height: 78vh;
+    background-color: #8bb2ff;
+}
+
+.Detail-Parent {
+    margin-top: 20px;
+}
+
+
+.Wind {
+    display: flex;
+    color: white;
+    font-weight: 600;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.Humidity {
+    display: flex;
+    color: white;
+    font-weight: 600;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.Locate-city {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    color: white;
+}
+
+.img-bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.img-bx img {
+    margin: auto;
+    width: 125px;
+    height: 125px;
+}
+
+.img-bx p {
+    color: white;
+    font-weight: 600;
+}
+
+.img-bx h1{
+    font-size: 75px;
+    margin-top: 10px;
+    color: white;
+}
+
+/* hourly css ------------- */
+
+
+
+.Hourly-parent {
+    display: flex;
+    justify-content: space-evenly;
+}
+.Hourly-child {
+    width: 140px;
+    height: 160px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Hourly-child img{
+    width: 70px;
+    height: 60px;
+}
+
+
+/* right box css------ */
+
+.Date-Time {
+    padding: 10px;
+    color: dodgerblue;
+}
+
+.Days-Parent {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
