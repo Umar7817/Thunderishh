@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import './App.css'
 import ThunderishContext from './components/ThunderishContext'
@@ -12,20 +12,35 @@ function App() {
 
 
   const [data, setData] = useState("");
+  const [oneCall, setOneCall] = useState("")
 
   const fetchApi = (query) => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=40b0aa02f32b3808c1d78c223390e70d`)
     .then( (res) => res.json())
-    .then( data => setData(data))
+    .then( data => console.log(data))
     .catch((err) => console.log(err.message))
+
+  console.log(data)
+
     
   }
 
- 
+  const fetchHour = (lat, lon) => {
+    console.log(lat, lon)
 
+  }
+
+  
+   useEffect(() => {
+    fetchHour(data.coord)
+    
+  }, [data]);
+
+
+  
 
   return (
-    <ThunderishContext.Provider value={{ data, fetchApi , }}>
+    <ThunderishContext.Provider value={{ data, fetchApi, }}>
       <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/news' element={<News />} />

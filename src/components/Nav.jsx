@@ -10,7 +10,35 @@ function Nav() {
 
 
     const [city, setCity] = useState("")
-    const { data, fetchApi } = useContext(ThunderishContext);
+    const { data, fetchApi} = useContext(ThunderishContext);
+
+    const handleChange = (e) => {
+        setCity(e.currentTarget.value)
+    }
+
+    const handleClick = () => {
+       fetchApi(city)
+
+    }
+
+    const gotLocation = (position) => {
+        console.log(position)
+    }
+
+    const failedToGet = () => {
+        console.log("there was some error while fetching the location")
+    }
+
+
+
+    const getLocation =  async () => {
+        const loaction = navigator.geolocation.getCurrentPosition(gotLocation, failedToGet)
+     
+        
+        
+       }
+
+
     return (
         <>
             <div className='Nav-Parent'>
@@ -29,12 +57,14 @@ function Nav() {
 
                 <div className='Input'>
 
-                    <input type="text" placeholder='Enter City Name' onChange={e => setCity(e.target.value)} />
-                    <Search onClick={ () => {
-                        fetchApi(city)                 
-                    }} />
-                    <MapPin />
+                    <input type="text" placeholder='Enter City Name' onChange={handleChange} />
+                    <Search className='search-btn' onClick={() => handleClick()} />
                 </div>
+                    <div className='location-div' onClick={() => getLocation() }>
+
+                    <MapPin  />
+                    <p>Current Location</p>
+                    </div>
 
 
             </div>

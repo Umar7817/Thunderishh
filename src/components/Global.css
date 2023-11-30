@@ -5,20 +5,47 @@
 }
 
 .Home-Parent{
-    background: rgb(224,228,240);
+    background: #white;
     height: 100vh;
+    
 }
 
 .Nav-Parent{
 
-    background-color: white;
+    background-color: white ;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     padding: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    position: sticky;
+    z-index: 100;
+    top: 0;
 
+}
+
+.location-div {
+    display: flex;
+    gap: 10px;
+    background-color: #265073;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ECF4D6;
+
+
+}
+
+.location-div:hover {
+    cursor: pointer;
+}
+
+.location-div p {
+    font-weight: 600;
+}
+
+.search-btn {
+    cursor: pointer;
 }
 
 .Head-Li {
@@ -46,17 +73,20 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    position: relative;
 
 }
 
 .Input input {
     width: 300px;
     border: none;
-    background-color: aliceblue;
+    background-color: transparent;
+    /* border: 1px solid black; */
     height: 35px;
     border-radius: 15px;
     padding-left: 15px;
-    outline-color: dodgerblue;
+    outline-color: black; 
+    border: 1px solid grey;
 } 
 
 
@@ -174,6 +204,8 @@
 }
 
 
+
+
 /* right box css------ */
 
 .Date-Time {
@@ -185,4 +217,30 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
+}
+
+
+
+/* -------------------- Home ----------------------- */
+
+.LR-bx {
+    display: flex;
+    padding: 30px;
+    position: relative;
+}
+
+.Right-side{
+    width: 30vw;
+    background-color: blue;
+    height: 80vh;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    
+}
+
+.Left-side {
+    
+    width: 70vw;
+    height: 100%;
 }
