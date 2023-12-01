@@ -10,7 +10,7 @@ function Nav() {
 
 
     const [city, setCity] = useState("")
-    const { data, fetchApi} = useContext(ThunderishContext);
+    const { apiData, fetchApi} = useContext(ThunderishContext);
 
     const handleChange = (e) => {
         setCity(e.currentTarget.value)

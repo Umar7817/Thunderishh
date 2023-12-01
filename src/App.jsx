@@ -11,36 +11,44 @@ function App() {
   
 
 
-  const [data, setData] = useState("");
+  const [apiData, setApiData] = useState("");
+  const [hour, setHour] = useState("")
   const [oneCall, setOneCall] = useState("")
 
-  const fetchApi = (query) => {
+  const fetchApi =  (query) => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=40b0aa02f32b3808c1d78c223390e70d`)
     .then( (res) => res.json())
-    .then( data => console.log(data))
+    .then( data => setApiData(data))
     .catch((err) => console.log(err.message))
 
-  console.log(data)
-
+    fetchHour(apiData.coord.lat, apiData.coord.lon);
     
-  }
-
-  const fetchHour = (lat, lon) => {
-    console.log(lat, lon)
-
   }
 
   
-   useEffect(() => {
-    fetchHour(data.coord)
-    
-  }, [data]);
+  
+  const fetchHour = (lat, lon) => {
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${apiData.coord.lat}&lon=${apiData.coord.lon}&appid=40b0aa02f32b3808c1d78c223390e70d`)
+    .then((res) => res.json())
+    .then(data => setHour(data))
+    .catch((error) => console.log(error.message))
+  } 
+
+  console.log(hour)
+  
+  // useEffect(()=> {
+  //   fetchApi("ahmedabad")
+  // },[])
+
+  //  useEffect(() => {
+  //   fetchHour()
+  // }, [apiData]);
 
 
   
 
   return (
-    <ThunderishContext.Provider value={{ data, fetchApi, }}>
+    <ThunderishContext.Provider value={{ apiData, fetchApi, }}>
       <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/news' element={<News />} />
