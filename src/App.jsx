@@ -8,20 +8,19 @@ import News from './components/News'
 
 function App() {
 
-  
-
-
   const [apiData, setApiData] = useState("");
   const [hour, setHour] = useState("")
-  const [oneCall, setOneCall] = useState("")
+  
 
   const fetchApi =  (query) => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=40b0aa02f32b3808c1d78c223390e70d`)
     .then( (res) => res.json())
-    .then( data => setApiData(data))
+    .then( (data) => setApiData(data))
     .catch((err) => console.log(err.message))
 
-    fetchHour(apiData.coord.lat, apiData.coord.lon);
+    
+    // fetchHour(apiData.coord.lat, apiData.coord.lon)
+    console.log(apiData)
     
   }
 
@@ -32,23 +31,27 @@ function App() {
     .then((res) => res.json())
     .then(data => setHour(data))
     .catch((error) => console.log(error.message))
+    console.log(hour)
   } 
 
-  console.log(hour)
   
   // useEffect(()=> {
   //   fetchApi("ahmedabad")
-  // },[])
+  // },[apiData])
 
-  //  useEffect(() => {
-  //   fetchHour()
-  // }, [apiData]);
+    // useEffect((lat, lon) => {
+    //   if(apiData){
+
+
+    //     fetchHour(apiData.coord.lat, apiData.coord.lon)
+    //   }
+    // }, [apiData]);
 
 
   
 
   return (
-    <ThunderishContext.Provider value={{ apiData, fetchApi, }}>
+    <ThunderishContext.Provider value={{ apiData, fetchApi, hour}}>
       <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/news' element={<News />} />
