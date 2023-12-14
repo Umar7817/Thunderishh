@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import './Global.css'
 import { Link } from 'react-router-dom'
 import { Search, Locate, MapPin, ClipboardTypeIcon } from 'lucide-react'
@@ -10,6 +10,7 @@ function Nav() {
 
 
     const [city, setCity] = useState("")
+    const [geoLoaction, setGeolocation] = useState("") 
     const { apiData, fetchApi} = useContext(ThunderishContext);
 
     const handleChange = (e) => {
@@ -23,6 +24,10 @@ function Nav() {
 
     const gotLocation = (position) => {
         console.log(position)
+        
+        // if(position)
+        //     fetchApi(position.coord.latitude, position.coord.longtitude)
+        
     }
 
     const failedToGet = () => {
@@ -32,11 +37,12 @@ function Nav() {
 
 
     const getLocation =  async () => {
-        const loaction = navigator.geolocation.getCurrentPosition(gotLocation, failedToGet)
-     
+         const loaction = navigator.geolocation.getCurrentPosition(gotLocation, failedToGet)
         
         
        }
+
+       
 
 
     return (

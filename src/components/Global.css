@@ -6,7 +6,7 @@
 }
 
 .Home-Parent{
-    background: #white;
+    background: rgb(238, 250, 255);
     height: 100vh;
     
 }
@@ -242,22 +242,25 @@
     height: 85vh;   
     position: sticky;
     top: 0;
-    overflow: hidden;
+    
     padding: 10px;
 
     
 }
 
 .Left-side {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
     width: 70vw;
-    height: 85vh;
+    height: 84vh;
     border-radius: 10px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;    
 }
 
 .location-time{
-    background-color: white;
+    
     border-radius: 10px;
     height: 37vh;
     display: flex;
@@ -289,4 +292,178 @@
 }
 hr {
     color: grey;
+}
+
+.days-5{
+    padding: 5px;
+    font-weight: 700;
+}
+
+.top-container{
+    padding: 10px;
+    width: 100%;
+    height: 50%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+.top-left-container {
+    border-radius: 10px;
+    width: 48%;
+    height: 90%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    
+}
+
+.top-right-container {
+    border-radius: 10px;
+    width: 48%;
+    height: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.bottom-container{
+    
+    padding: 10px;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.btc-1 {
+    height: 100%;
+    width: 24%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btc-2 {
+    height: 100%;
+    width: 24%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btc-3 {
+    height: 100%;
+    width: 24%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btc-4 {
+    height: 100%;
+    width: 24%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.air-quality {
+    display: flex;
+    gap: 20px;
+}
+
+.about-air {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inf-div {
+    width: 25%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    border-radius: 20px;
+}
+
+
+.sun-rise {
+    display: flex;
+    background-color: ;
+    height: 85px;
+    border-radius: 20px;
+    gap: 20px;
+    
+}
+
+.sun-rise-parent {
+    width: 50%;
+}
+
+.sunRise {
+    
+    width: 50%;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sunSet {
+   
+    width: 50%;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.SUNRise-2{
+    font-size: 50px;
+}
+.sun-rise-cont {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    
+}
+
+.reload {
+    width: 50px;
+    margin: auto;
+    
+}
+.common-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

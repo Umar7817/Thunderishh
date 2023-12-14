@@ -13,32 +13,32 @@ function Days() {
             <div className='Days-Parent'>
                  <div className='Hourly-child'>
                     <img src={img} alt="" />
-                    <p>{hour.list[5].weather[0].description}</p>
-                    <p>{hour.list[5].main.temp}°</p>
+                    <p>{hour.list[5].weather[0].description} </p>
+                    <p>{(hour.list[5].main.temp - 273).toFixed()}°</p>
                 </div>
                 <hr />
                 <div className='Hourly-child'>
                     <img src={img} alt="" />
                     <p>{hour.list[13].weather[0].description}</p>
-                    <p>{hour.list[13].main.temp}°</p>
+                    <p>{(hour.list[13].main.temp - 273).toFixed()}°</p>
                 </div>
                 <hr />
                 <div className='Hourly-child'>
                     <img src={img} alt="" />
                     <p>{hour.list[21].weather[0].description}</p>
-                    <p>{hour.list[21].main.temp}°</p>
+                    <p>{(hour.list[21].main.temp - 273).toFixed()}°</p>
                 </div>
                 <hr />
                 <div className='Hourly-child'>
                     <img src={img} alt="" />
                     <p>{hour.list[29].weather[0].description}</p>
-                    <p>{hour.list[29].main.temp}°</p>
+                    <p>{(hour.list[29].main.temp - 273).toFixed()}°</p>
                 </div>
                 <hr />
                 <div className='Hourly-child'>
                     <img src={img} alt="" />
                     <p>{hour.list[37].weather[0].description}</p>
-                    <p>{hour.list[37].main.temp}°</p>
+                    <p>{(hour.list[37].main.temp - 273).toFixed()}°</p>
                 </div>
                        
         
